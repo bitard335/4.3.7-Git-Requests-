@@ -1,0 +1,89 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(196, 196, 196, 1);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button{
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+.wrapper {
+  font-family: Roboto;
+  margin: 62px 77px;
+  width: 500px;
+}
+.search-box__input {
+  padding-left: 13px;
+  box-sizing: border-box;
+  border: 0;
+  width: 500px;
+  height: 61px;
+  font-size: 48px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.search-box__item {
+  padding-left: 13px;
+  height: 44;
+  border: 2px solid black;
+  font-size: 30px;
+  background-color: rgba(227, 227, 227, 1);
+}
+.search-box__item:hover {
+  background-color: rgba(101, 205, 249, 1);
+}
+
+.git-list {
+  margin-top: 45px;
+}
+.git-item {
+  font-size: 24px;
+
+  align-items: center;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+
+  border: 1px solid black;
+  background-color: rgba(226, 123, 235, 1);
+}
+
+.git-item-close {
+  margin-right: 34px;
+  position:relative;
+  width: 38px;
+  height: 42px;
+  opacity: 0.3;
+
+  transform: scale(1);
+  transition-duration: 1000ms;
+}
+.git-item-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.git-item-close:before, .git-item-close:after {
+  position: absolute;
+  top: 0;
+  content: ' ';
+  height: 42px;
+  width: 4px;
+  background-color: rgba(255, 0, 0, 1);
+}
+.git-item-close:before {
+  transform: rotate(45deg);
+}
+.git-item-close:after {
+  transform: rotate(-45deg);
+}
+
+.hidden {
+  display: none;
+}

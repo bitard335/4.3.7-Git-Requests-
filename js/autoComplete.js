@@ -19,7 +19,7 @@ function debounce(cb, delay) {
 
 function getRepos(q) {
   
-  if (!input.value) {
+  if (!q) {
     clearSuggestions();
     return
   }

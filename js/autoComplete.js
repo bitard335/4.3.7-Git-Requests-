@@ -22,6 +22,7 @@ function getRepos(q) {
   return fetch("https://api.github.com/search/repositories?" + queryString)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       for (let i = 1; i < 6; i++) {
         response.push(data.items[i]);
       }

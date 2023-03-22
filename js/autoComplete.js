@@ -18,6 +18,11 @@ function debounce(cb, delay) {
 }
 
 function getRepos(q) {
+  
+  if (!input.value) {
+    clearSuggestions();
+    return
+  }
   const queryString = "q=" + encodeURIComponent(q);
   return fetch("https://api.github.com/search/repositories?" + queryString)
     .then((response) => response.json())
@@ -76,10 +81,6 @@ function deleteRepo(repo) {
 
 input.addEventListener("input", (evt) => {
 
-  if (!input.value) {
-    clearSuggestions();
-    return;
-  }
   if (evt.data != " ") {
     debouncedGetRepos(input.value);
   }

@@ -35,7 +35,7 @@ function getRepos(q) {
 }
 
 function applySuggestions(data) {
-  if (!data) {
+  if (!data.items) {
     return;
   }
 

@@ -35,14 +35,13 @@ function getRepos(q) {
 }
 
 function applySuggestions(data) {
-  if (!data.items) {
-    return;
-  }
-
   clearSuggestions();
 
   const fragment = new DocumentFragment();
   for (i = 1; i < 6; i++) {
+    if (!data.items[i]) {
+      return;
+    }
     const suggestion = document.createElement("li");
     suggestion.textContent = data.items[i].name;
     suggestion.classList.add("search-box__item");

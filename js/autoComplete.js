@@ -75,7 +75,7 @@ function deleteRepo(repo) {
 }
 
 input.addEventListener("input", (evt) => {
-  console.log(evt.data);
+
   if (!input.value) {
     clearSuggestions();
     return;
